@@ -1,201 +1,167 @@
-/* General setup */
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
 
-* {
-    box-sizing: border-box;
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+header,nav{
+    border-bottom: .125rem solid black;
 }
-
-html {
-    font-size:16px;
-}
-
-body {
-    margin: 1.5rem auto;
-    width:90%;
-    min-width:56.25rem;
-}
-
-/* Layout */
-
-main {
-    overflow:auto;
-    min-width:45rem;
+article{
+    border-right: .1rem solid black;
+    margin-right: -1em;
     
 }
-
-section {
-    float: left;
-    min-width: 22.5rem;
-    width:50%;
-}
-
-figure {
-    width:60%;
-    margin:0 10% 0 0;
-    float:left;
-}
-
-figure img {
-    width:100%;
-    max-width:25rem;
-}
-
-figcaption {
-    margin:.375rem 0;
-}
-
-.long-list {
-    margin-top:0;
-}
-
-nav {
-    float: left;
-    width:11.25rem;
-}
-
-footer {
-    clear: both;
-    margin-top:1.5rem;
-}
-
-section, aside, nav, footer {
-  padding: .5rem;
-}
-
-/* header and footer */
-
-header, footer {
-  border-top: .125rem solid #33658A;
-  border-bottom: .125rem solid #33658A;
-}
-
-/* ------ START WRITING YOUR CODE BELOW THIS LINE ------ */
-
-/* NO changes should be made to any of the code above. */
-
-/* NOTE: While you will be using some of the same CSS properties, the VALUES 
-   may need to be different in order to style the page correctly. */
-
-
-
-/* Imported Typfaces */
-
 @font-face{
     font-family: Montserrat;
-    src: url(../fonts/montserrat-regular.ttf) format('truetype');
+    src: url(../fonts/sans-serif/montserrat-regular.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: Josefinslab;
-    src: url(../fonts/josefinslab-regular.ttf) format('truetype');
+    src: url(../fonts/serif/josefinslab-regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Opensans;
+    src: url(../fonts/sans-serif/opensans-regular.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-
-
-/* Typography Styles */
-html{
-    font-family: Montserrat, Arial, sans-serif;
+span{
+    background-color: rgb(190, 98, 98);
+    color: rgb(193, 221, 193);
 }
 h1{
-    font-family: Josefinslab, Arial, sans-serif;
-    letter-spacing: 0.125rem;
-    font-size: 3.75rem;
-    margin: 1.125rem;
     text-align: center;
+    font-size: 3em;
+    font-family: Montserrat, Arial, sans-serif;
+    font-style: italic;
+    
 }
 h2{
-  font-size: 1.5rem;
-  font-family: Josefinslab, Arial, sans-serif;
+    font-size: 1.5em;
+    margin-left: 1.7em;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    font-family: Arial;
 }
-h2 + p{
-    font-size: 0.75rem;
-    letter-spacing: 0.03125rem;
-    text-indent: 1.5rem;
+h3{
+    font-size: 1em;
+    text-align: left;
+}
+nav {
+    background-color: #FFF;
+    padding-left: 0;
+  }
+nav ul{
+    text-align: left;
+    margin-left:1em;
+    padding:0;
+    list-style: none;
+    display: flex;
+    word-spacing: normal;
+    
+}
+nav a {
+    color: rgb(30, 30, 97);
+    text-decoration: none;
+    padding: 1em 1em;
+    font-size: 1.5em;
+    font-family: Opensans, Arial, sans-serif;
+
+  }
+button{
+    color: white;
+    background-color:darkblue;
+}
+.article-image{
+    width:15em;
+    float: left;
+    margin-right: 11.5em;
+}
+.main-section{
+    display: grid;    
+    grid-template-columns: 70% 20%;
+    grid-column-gap: 3em;
 }
 
-p{
-    font-size: 0.75rem;
-    letter-spacing: 0.03125rem;
+.subsection{  
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  grid-column-gap: 0.5em;
+  row-gap: 1em;
 }
-li{
-    font-size: 0.75rem;
-    letter-spacing: 0.03125rem;
+div{
+    max-width: 15em;
+}
+p{
+    margin-right: 1.5em;
+    font-family: Opensans,Arial, sans-serif;
+}
+p2{
+    font-size: .5em;
 }
 figcaption{
-    font-size: 0.75rem;
-    margin-bottom: 2rem;
+    font-size: .8em;
+    background-color: rgb(193, 221, 193);
+    width: 22.5em;
+    height: 3em;
+    text-align: center ;
 }
-
-
-/* Link Styling */
-a{
-    text-decoration-style: none;
+.margin{
+    margin-left: 2.5rem;
 }
-a:link,
-a:visited{
-    color: #33658A;
+.button{
+    margin-right: 2.5em;
+    margin-top:3em;
+    
 }
-a:focus,
-a:hover{
-    text-decoration-style: none;
-    text-decoration: none;
-}
-
-/* List Styling */
-
-ul{
-    margin: 1rem 0rem 1rem 0rem;
-    list-style-type: square;
-}
-ol {
-    margin: 1rem 0rem 1rem 0rem;
-    initial-letter: lowercase;
-}
-.long-list a:hover{
-    text-transform: uppercase;
-}
-
-
-
-/* Navigation Menu */
-nav{
-    padding-left: 0rem;
-    margin-top: 0.25rem;
-}
-nav a{
-    text-decoration: unset;
-    display: inline-block;
-    width: 100%;
-    line-height: 3;
-    text-align: center;
-    font-size: 1.125rem;
-    margin-bottom: 1.5rem;
-    border: solid;
-    border-width: 0.0625rem;
-    border-color: #33658A;
-}
-nav a:focus,
-nav a:hover{
-    color: #FFF;
-    background-color: #33658A;
-}
-nav a:active{
-    color: #FFF;
-    background-color: #000;
-}
-
-
-
-
-
-/* Footer Styles */
-
-footer{
-    text-align: center;
-}
-
-
 
 
